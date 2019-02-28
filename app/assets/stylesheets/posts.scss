@@ -1,0 +1,101 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+
+.kcontents{
+     border:solid 2px;
+     width:900px;
+     margin:0 auto;
+     margin-top:50px;
+}
+
+.text-list{
+    text-align:left;
+  
+    padding:20px;
+   
+}
+
+.ksub-title{
+    background-color:#EEEEEE;
+    padding-top:20px;
+   
+}
+
+.header-title{
+    margin:40px 0px;
+  
+}
+
+.ktitle h2{
+    text-align:center;
+    padding-bottom:10px;
+}
+
+.ktitle p{
+    text-align:center;
+}
+
+.ksub-title h2{
+    text-align:center;
+    padding-bottom:10px;
+    
+}
+
+.ksub-title p{
+    text-align:center;
+    padding-bottom:20px;
+    
+}
+
+.board-contents{
+    height:1800px;
+  　position: sticky;
+  　top:200px;
+  　left:200px;
+}
+
+.board-econtents{
+    height:500px;
+}
+
+.wtext{
+    border:solid 1px;
+}
+
+.user-name{
+    font-size:20px;
+    margin:30px 0;
+}
+
+.b-edit{
+    font-size:15px;
+    border:solid 1px;
+    margin:0px 10px;
+    padding:5px;
+    border-radius:2px;
+    background-color:#EEFFFF;
+}
+
+.b-delete{
+    font-size:15px;
+    border:solid 1px;
+    margin:0px 5px;
+    padding:5px 7px;
+    border-radius:2px;
+    background-color:#FFEEFF;
+}
+
+
+.k-text{
+    font-size:18px;
+}
+
+.all{
+    height:3900px;
+}
+

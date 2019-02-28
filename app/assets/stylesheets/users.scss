@@ -1,0 +1,173 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.errorMessage{
+   text-align:center;
+   color:red;
+}
+
+.login-succsess{
+    color:blue;
+}
+
+.notic{
+    color:red;
+}
+
+.form-error{
+    color:red;
+    text-align:center;
+}
+
+.create-flash{
+　　color:red;
+    text-align:center;
+    padding:10px;
+}
+
+.false-flash{
+     color:red;
+     font-size:15px;
+     text-align:center;
+     padding:10px;
+}
+
+header{
+   
+    background-color:#fff0f5;
+    padding-bottom:20px;
+    padding-top:20px;
+}
+.navbar.navbar-default{
+  
+    margin:0px;
+    background-color:#C2EEFF;
+   
+    
+}
+
+#user{
+    font-size:16px;
+    font-weight:bold;
+    padding-top:3px;
+    padding-bottom:1px;
+    width:100&;
+    background-color:#CEF9DC;
+    text-align:center;
+}
+
+
+
+.title{
+    margin:0 auto;
+    color:#66FF66;
+    text-align:center;
+}
+
+.sub-title{
+    
+    color:#9057FF;
+    text-align:center;
+    
+}
+
+body{
+    background-color:#F3FFD8;
+}
+
+.contents{
+    margin:0;
+    padding-top:20px;
+    height:1080px;
+    text-align:center;
+    background-color:#FFFFEE;
+   
+}
+
+.body-con{
+    background-color:#FFFFCC;
+}
+
+.contents p{
+    text-align:left;
+    line-height:2;
+    margin:0 auto;
+    width:640px;
+    font-size:18px;
+    border:0
+    
+}
+
+
+
+footer{
+    position:fixed;
+    bottom:0;
+    margin:0 auto;
+    width:100%;
+    text-align:center;
+    padding:10px 0px;
+    background-color:#AEFFBD;
+}
+
+.jumbotron{
+    height:200px;
+    width:1000px;
+    margin:0 auto;
+    margin-top:20px;
+}
+
+
+.fas.fa-camera-retro h1{
+    font-size:20px;
+}
+
+
+.con-body{
+    height:1300px;
+}
+
+
+img{
+    width:300px;
+    height:220px;
+}
+
+.img-thumbnail{
+    margin:20px 0px;
+}
+
+
+.mtitle{
+    font-size:35px;
+    text-align:center;
+}
+
+.log-title{
+    text-align:center;
+    margin:20px;
+}
+
+.log-text{
+    text-align:center;
+    margin-bottom:20px;
+    
+}
+
+.new-title{
+    text-align:center;
+    margin:20px;
+}
+
+.new-text{
+    text-align:center;
+}
+
+.login-text{
+    text-align:center;
+}
+.login-title{
+    text-align:center;
+    margin-bottom:20px;
+}

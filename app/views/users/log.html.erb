@@ -1,0 +1,100 @@
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">ホーム</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/new">新規会員登録</a></li>
+        <li><a href="/show">掲示板</a></li>
+        <li><a href="/login">ログイン</a></li>
+        <li><%= link_to "ログアウト", logout_path, method: :post %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to '戻る', :back %></li> 
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/new">New</a></li>
+            <li><a href="/show">Board</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><%= link_to "Logout", logout_path, method: :post %></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+<!--ログイン中のユーザー名表示-->  
+<div id="user">
+<% current_user=User.find_by(id: session[:user_id])%>
+<p><%=current_user.name%>さんようこそ!</p>
+</div> 
+
+ <!--ログインフラッシュ表示-->
+<div class="create-flash">
+  <% if flash[:notice] %>
+        <div class="login-succsess">
+          <%= flash[:notice] %>
+        </div>
+  <% end %>
+</div>
+
+<div class="container">
+  <h2 class="log-title">オススメ道の駅ランキング!</h2>
+  <p class="log-text">オススメしたい道の駅をランキング形式にしています。興味のある道の駅をクリックするとフォトギャラリーを見ることができます。</p>
+  
+  
+<table class="table table-bordered">
+  <tr>
+    <th>順位</th>
+    <th>道の駅名</th>
+    <th>所在地</th>
+  </tr>
+  <tr>
+    <td>1位</td>
+    <td><a href="/rank1" target="_blank">道の駅きなんせ岩美</a></td>
+    <td>鳥取県岩美郡</td>
+  </tr>
+  <tr>
+    <td>2位</td>
+    <td><a href="/rank2" target="_blank">道の駅うずしお</a></td>
+    <td>兵庫県南あわじ市</td>
+  </tr>
+  <tr>
+    <td>3位</td>
+    <td><a href="rank3" target="_blank">道の駅マイントピア別子</a></td>
+    <td>愛媛県新居浜市</td>
+  </tr>
+  <tr>
+    <td>4位</td>
+    <td><a href="rank4" target="_blank">道の駅あまるべ</a></td>
+    <td>兵庫県美方郡</td>
+  </tr>
+  <tr>
+    <td>5位</td>
+    <td><a href="rank5" target="_blank">道の駅丹波おばあちゃんの里</a></td>
+    <td>兵庫県丹波市</td>
+  </tr>
+</table>
+</div>
+
+
+

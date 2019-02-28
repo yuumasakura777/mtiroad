@@ -1,0 +1,87 @@
+
+
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">ホーム</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/new">新規会員登録</a></li>
+        <li><a href="/login">ログイン</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to '戻る', :back %></li> 
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/new">New</a></li>
+            <li><a href="/login">Login</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+<h2 class="new-title">新規会員登録</h2>
+
+<p class="new-text">下記より新規会員登録をしてください。</p>
+
+<!--フラッシュ表示-->
+<!--登録失敗時のフラッシュ表示-->
+<div class="false-flash">
+  <% if flash[:false] %>
+        <div class="flash">
+          <%= flash[:false] %>
+        </div>
+  <% end %>
+</div>
+
+<div class="container">
+<%= form_tag("/create") do %>
+
+
+
+<!--エラーメッセージを表示 -->
+<div class="errorMessage">
+  <% if @user.errors.any? %>
+      <p><%=@user.errors.messages[:name][0]%></p>
+      <p><%=@user.errors.messages[:email][0]%></p>
+      <p><%=@user.errors.messages[:password][0]%></p>
+  <% end %>
+</div>
+<div class="form-errors">
+    <div class="form-group">
+        <%=label_tag "form-name","UserName" %>
+        <input type="text" id="form-name" class="form-control" value="<%=@name%>" name="name" placeholder="ユーザー名を入力してください"><br>
+    </div>
+    <div class="form-group">
+        <%=label_tag "form-email","Email" %>
+        <input type="mail" id="form-email" class="form-control" value="<%=@email%>" name="email" placeholder="メールアドレスを入力してください"><br>
+    </div>
+    <div class="form-group">
+        <%= label_tag "form-password","Password" %>
+        <input type="password" id="form-password" class="form-control" value="<%=@password%>" name="password" placeholder="パスワードを入力してください"><br>
+    </div>
+        <%=submit_tag "新規登録" ,class:"btn btn-success"%>
+</div>
+<% end %>
+</div>
+
+

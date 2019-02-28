@@ -1,0 +1,89 @@
+
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">ホーム</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/new">新規会員登録</a></li>
+        <li><a href="/login">ログイン</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to '戻る', :back %></li> 
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/new">New</a></li>
+            <li><a href="/login">Login</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!--flash表示-->
+
+<div class="create-flash">
+  <% if flash[:notic] %>
+        <div class="notic">
+          <%= flash[:notic] %>
+        </div>
+  <% end %>
+</div>
+<div class="create-flash">
+  <% if flash[:notice] %>
+        <div class="login-succsess">
+          <%= flash[:notice] %>
+        </div>
+  <% end %>
+</div>
+
+<h2 class="login-title">ログイン</h2>
+
+<p class="login-text">下記よりログインしてください。</p>
+
+<!--エラーメッセージ -->
+<% if @error_message %>
+    <div class="form-error">
+        <%= @error_message %>
+    </div>
+<% end %>
+
+<div class="container">
+<%= form_tag("/login") do %>
+
+
+<!--フォーム部分-->
+<div class="form-group">
+    <%=label_tag "form-email","Email"%>
+    <input type="text" placeholder="メールアドレスを入力してください" name="email" value="<%=@email%>" class="form-control" id="form-email"><br>
+</div>
+<div class="form-group">
+    <%=label_tag "form-password","Password"%>
+    <input type="password" placeholder="パスワードを入力してください" name="password" value="<%=@password%>" class="form-control" id="form-password"><br>
+</div>
+<input type="submit" value="ログイン" class="btn btn-primary"%>
+
+<% end %>
+</div>
+
+
+
+
+
+
