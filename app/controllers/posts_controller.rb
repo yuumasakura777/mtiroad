@@ -15,6 +15,7 @@ class PostsController < ApplicationController
     #一覧取得&ページネーション処理
     def show
         @posts=Post.page(params[:page]).per(PER)
+       
         @user=User.all
     end
     
